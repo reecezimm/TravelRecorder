@@ -7,11 +7,21 @@ namespace TravelRecord
 {
     public partial class App : Application
     {
+        public static string Dbl = string.Empty;
         public App()
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage( new MainPage());
+        }
+
+        public App(string dbl)
+        {
+            InitializeComponent();
+
+            MainPage = new NavigationPage(new MainPage());
+
+            Dbl = dbl;
         }
 
         protected override void OnStart()

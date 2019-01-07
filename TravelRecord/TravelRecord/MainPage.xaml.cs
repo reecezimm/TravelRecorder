@@ -13,5 +13,17 @@ namespace TravelRecord
         {
             InitializeComponent();
         }
+
+        private void LoginButton_Clicked(object sender, EventArgs e)
+        {
+            if(string.IsNullOrEmpty(Username.Text) || string.IsNullOrEmpty(Password.Text))
+            {
+
+            }
+            else
+            {
+                Navigation.PushAsync(new HomePage());
+            }
+        }
     }
 }
